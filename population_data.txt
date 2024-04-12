@@ -1,0 +1,6 @@
+Georgia, 2005, 10000000
+Georgia, 2006, 10000
+Georgia, 2007, 9924884
+Russia, 2005, 8900000
+Russia, 2006, 100000
+Russia, 2007, 0
