@@ -9,3 +9,19 @@ def read_population_data(file_path):
             population_data[country][int(year)] = int(population)
 
     return population_data
+
+def calculate_population_change(population_data):
+    population_change = {}
+
+    for country, data in population_data.items():
+        years = sorted(data.keys())
+        population_change[country] = {}
+        for i in range(1, len(years)):
+            prev_year = years[i - 1]
+            current_year = years[i]
+            prev_population = data[prev_year]
+            current_population = data[current_year]
+            change = current_population - prev_population
+            population_change[country][current_year] = change
+
+    return population_change
