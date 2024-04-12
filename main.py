@@ -25,3 +25,17 @@ def calculate_population_change(population_data):
             population_change[country][current_year] = change
 
     return population_change
+
+def main():
+    file_path = "population_data.txt"
+    population_data = read_population_data(file_path)
+    population_change = calculate_population_change(population_data)
+
+    print("Changes in population by years for each country:")
+    for country, data in population_change.items():
+        print(f"{country}:")
+        for year, change in data.items():
+            print(f"    {year}: {change}")
+
+if __name__ == "__main__":
+    main()
